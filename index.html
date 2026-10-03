@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karan Raj Kishore</title>
+<meta name="description" content="Karan Raj Kishore builds full-stack web apps and machine-learning models. Software engineering student at Delhi Technological University, class of 2027. Projects, skills, education and contact.">
+<meta name="author" content="Karan Raj Kishore">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Karan Raj Kishore">
+<meta property="og:description" content="Karan Raj Kishore builds full-stack web apps and machine-learning models. Software engineering student at Delhi Technological University, class of 2027. Projects, skills, education and contact.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#F5F6F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101215" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23FFD84A'/%3E%3Cpath d='M22 15v34M43 15 22 35M30 28l14 21' fill='none' stroke='%2314171C' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+:root{color-scheme:light}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+/* Layout: a marked-up spec sheet. One full-width nameplate, then open rows on a wide grid.
+   Hairlines separate the rows and the only bordered objects are the two figures.
+   A marigold highlighter marks the measured figures and ends the page as the contact panel. */
+:root{
+  --paper:#F5F6F3; --surface:#FFFFFF; --surface-2:#ECEEE9;
+  --ink:#14171C; --ink-2:#454B54; --ink-3:#5F6670;
+  --line:#D9DCD5; --grid:#E7E9E4;
+  --mark:#FFD84A; --mark-hi:#FFC81F; --on-mark:#14171C; --mark-edge:#E3A900;
+  --focus:#1F5FD1;
+  --s1:#2a78d6; --s2:#eb6834;            /* chart series: precision, recall */
+  --star:#3366CC;
+  --display:"Archivo","Arial Black","Helvetica Neue",Arial,sans-serif;
+  --body:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --gutter:clamp(16px,4vw,40px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#101215; --surface:#181B20; --surface-2:#20242A;
+    --ink:#F0F1ED; --ink-2:#B9BEC5; --ink-3:#8E959E;
+    --line:#2B3037; --grid:#262A30;
+    --mark:#FFCE3A; --mark-hi:#FFDD6B; --on-mark:#14171C; --mark-edge:#FFCE3A;
+    --focus:#7FB0F5;
+    --s1:#3987e5; --s2:#d95926;
+    --star:#6C9BF2;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#101215; --surface:#181B20; --surface-2:#20242A;
+  --ink:#F0F1ED; --ink-2:#B9BEC5; --ink-3:#8E959E;
+  --line:#2B3037; --grid:#262A30;
+  --mark:#FFCE3A; --mark-hi:#FFDD6B; --on-mark:#14171C; --mark-edge:#FFCE3A;
+  --focus:#7FB0F5;
+  --s1:#3987e5; --s2:#d95926;
+  --star:#6C9BF2;
+  color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,p,dl,dt,dd,ul,ol,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+button{font:inherit;color:inherit}
+h1,h2,h3{font-family:var(--display);font-stretch:125%;font-weight:800;letter-spacing:-.02em;line-height:1.02;text-wrap:balance}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+[tabindex="-1"]:focus{outline:none}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+
+.wrap{max-width:1240px;margin-inline:auto;padding-inline:var(--gutter)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.label{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2);line-height:1.45}
+.ic{display:inline-block;width:1em;height:1em;flex:none;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.12em}
+.ic-fill{fill:currentColor;stroke:none}
+section[id],article[id]{scroll-margin-top:76px}
+
+/* highlighter */
+mark{background:var(--mark);color:var(--on-mark);border-radius:3px;padding:.04em .22em;font-weight:600;white-space:nowrap}
+.hl{position:relative;display:inline-block;white-space:nowrap;text-decoration:none;font-weight:600;padding:0 .22em;border-radius:3px}
+.hl-m{position:absolute;inset:0;padding:inherit;background:var(--mark);color:var(--on-mark);border-radius:3px;transition:background-color .15s}
+.hl:hover .hl-m{background:var(--mark-hi)}
+@media (prefers-reduced-motion: no-preference){
+  .hl-m{animation:sweep .6s cubic-bezier(.2,.75,.25,1) both;animation-delay:var(--d,.35s)}
+}
+@keyframes sweep{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+
+/* links and buttons */
+.link{text-decoration:underline;text-decoration-color:var(--mark-edge);text-decoration-thickness:2px;text-underline-offset:4px;border-radius:2px}
+.link:hover{background:var(--mark);color:var(--on-mark);text-decoration-color:transparent}
+.btn{display:inline-flex;align-items:center;gap:.5em;font-size:15px;font-weight:600;line-height:1;padding:13px 17px;border:1.5px solid var(--ink);border-radius:5px;background:transparent;color:var(--ink);text-decoration:none;cursor:pointer;transition:background-color .15s,color .15s,border-color .15s}
+.btn:hover{background:var(--mark);color:var(--on-mark);border-color:var(--on-mark)}
+.btn-solid{background:var(--ink);color:var(--paper)}
+.btn-sm{font-size:14px;padding:10px 13px}
+
+/* nav */
+.skip{position:absolute;left:var(--gutter);top:-80px;z-index:50;background:var(--ink);color:var(--paper);padding:10px 14px;border-radius:5px;font-size:14px;font-weight:600;text-decoration:none}
+.skip:focus{top:calc(env(safe-area-inset-top,0px) + 8px)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--paper);background:color-mix(in srgb,var(--paper) 86%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px}
+.brand{font-family:var(--display);font-stretch:125%;font-weight:800;font-size:17px;letter-spacing:.01em;text-decoration:none;padding:6px 0}
+.nav nav{display:flex;gap:clamp(0px,1vw,8px);min-width:0;overflow-x:auto;scrollbar-width:none}
+.nav nav::-webkit-scrollbar{display:none}
+.nav nav a{font-size:14.5px;font-weight:500;text-decoration:none;color:var(--ink-2);padding:8px 10px;border-radius:4px;white-space:nowrap}
+.nav nav a:hover{color:var(--ink);background:var(--surface-2)}
+.nav nav a[aria-current="true"]{color:var(--ink);box-shadow:inset 0 -2px 0 var(--mark-edge)}
+.nav nav a:focus-visible{outline-offset:-2px}
+
+/* hero */
+.hero{padding-block:clamp(30px,5vw,60px) clamp(16px,2.6vw,36px)}
+.hero .label span{color:var(--ink-3);padding-inline:.35em}
+.name{font-size:clamp(2.75rem,13vw,6.5rem);line-height:.95;letter-spacing:-.03em;margin-top:14px}
+.name span{display:block}
+.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:start;margin-top:clamp(22px,3.4vw,44px)}
+.statement{font-size:clamp(1.22rem,1.02rem + 1.05vw,1.72rem);line-height:1.44;max-width:31em;text-wrap:pretty}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.facts{border-top:2px solid var(--ink)}
+.facts>div{display:grid;grid-template-columns:7.25rem minmax(0,1fr);gap:12px;align-items:baseline;padding-block:11px;border-bottom:1px solid var(--line)}
+.facts dd{font-size:15.5px;line-height:1.45;overflow-wrap:anywhere}
+
+/* sections */
+.sec{padding-block:clamp(52px,7.5vw,104px)}
+.sec-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:14px clamp(28px,5vw,80px);align-items:end;margin-bottom:clamp(26px,3.6vw,48px)}
+.sec-head h2{font-size:clamp(2.3rem,6.2vw,4.6rem)}
+.sec-head p{color:var(--ink-2);max-width:34em;padding-bottom:.3em}
+
+/* case studies */
+.case{border-top:2px solid var(--ink);padding-top:20px}
+.case+.case{margin-top:clamp(64px,9vw,128px)}
+.case-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 32px}
+.case-head h3{font-size:clamp(1.9rem,4.4vw,3.2rem);margin-top:8px}
+.case-links{display:flex;flex-wrap:wrap;gap:8px}
+.case-body{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:start;margin-top:clamp(22px,3vw,36px)}
+.case-text{display:grid;gap:24px;min-width:0}
+.lede{font-size:1.14rem;line-height:1.52}
+.points{display:grid;gap:16px}
+.points dt{font-weight:700}
+.points dd{color:var(--ink-2);font-size:.97rem;line-height:1.55;margin-top:2px}
+.stack{display:flex;flex-wrap:wrap;gap:6px}
+.stack li{font-family:var(--mono);font-size:12px;line-height:1.3;padding:4px 8px;border:1px solid var(--line);border-radius:3px;background:var(--surface);color:var(--ink-2)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:clamp(16px,2.4vw,26px);min-width:0}
+figcaption{font-size:14px;line-height:1.5;color:var(--ink-2);margin-top:16px;max-width:62ch}
+.more{margin-top:clamp(26px,3.6vw,44px);padding-top:22px;border-top:1px solid var(--line)}
+.more-2{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(24px,5vw,72px)}
+.more-2>div{min-width:0}
+.flow{display:flex;flex-wrap:wrap;gap:8px 30px;margin-top:12px}
+.flow li{position:relative;padding-left:17px;font-size:.98rem}
+.flow li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;background:var(--mark);border-radius:1px;box-shadow:0 0 0 1px var(--on-mark)}
+.finds{display:grid;gap:12px;margin-top:12px}
+.finds li{font-size:.98rem;color:var(--ink-2)}
+.finds b{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
+
+/* tables */
+.tbl-wrap{overflow-x:auto;margin-top:8px}
+.tbl{border-collapse:collapse;width:100%;font-size:14.5px;font-variant-numeric:tabular-nums}
+.tbl th,.tbl td{padding:9px 0 9px 16px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap;font-weight:400}
+.tbl th:first-child,.tbl td:first-child{text-align:left;padding-left:0}
+.tbl thead th{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);font-weight:500}
+.tbl .win{font-weight:700;color:var(--ink)}
+.tbl-t{max-width:30rem}
+.tbl-t th,.tbl-t td{white-space:normal}
+.tbl-note{font-size:13.5px;color:var(--ink-2);margin-top:10px}
+
+/* diagram */
+.dg{display:block;width:100%;max-width:430px;height:auto;margin-inline:auto}
+.dg text{font-family:var(--body);fill:var(--ink)}
+.dg .dg-t{font-size:13px;font-weight:700}
+.dg .dg-s{font-size:12px;fill:var(--ink-2)}
+.dg .dg-tag{font-family:var(--mono);font-size:9.5px;font-weight:500;letter-spacing:.06em;fill:var(--ink-2)}
+.dg .dg-node{fill:var(--surface);stroke:var(--ink);stroke-width:1.5}
+.dg .dg-dash{stroke-dasharray:5 4}
+.dg .dg-step{fill:var(--surface-2)}
+.dg .dg-arr{fill:none;stroke:var(--ink);stroke-width:1.5}
+.dg .dg-head{fill:var(--ink)}
+.dg .dg-db{fill:var(--mark);stroke:var(--on-mark);stroke-width:1.25}
+.dg .dg-on{fill:var(--on-mark)}
+
+/* threshold explorer */
+.ex-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 20px}
+.ex-val{display:block;font-family:var(--display);font-stretch:125%;font-weight:800;font-size:2.7rem;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin-top:6px}
+.seg{display:inline-flex;border:1.5px solid var(--ink);border-radius:5px;overflow:hidden}
+.seg button{background:transparent;border:0;padding:9px 12px;font-size:13.5px;font-weight:600;line-height:1.2;cursor:pointer}
+.seg button+button{border-left:1.5px solid var(--ink)}
+.seg button:hover{background:var(--mark);color:var(--on-mark)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--surface)}
+.seg button:focus-visible{outline-offset:-4px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:18px;font-size:13px;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend .hint{margin-left:auto;color:var(--ink-3)}
+.key{display:inline-block;width:16px;height:0;border-top:2.5px solid var(--s1);border-radius:2px}
+.key.r{border-top-color:var(--s2)}
+.plot{position:relative;margin-top:8px}
+.plot-svg{min-height:214px;cursor:crosshair}
+.plot-svg svg{display:block;max-width:100%}
+.plot .gl{stroke:var(--grid);stroke-width:1}
+.plot .ax{stroke:var(--ink-3);stroke-width:1.5}
+.plot .tk{stroke:var(--ink-3);stroke-width:1}
+.plot text{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.plot .dl{font-family:var(--body);font-size:12.5px;font-weight:600;fill:var(--ink-2)}
+.plot .ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;stroke:var(--s1)}
+.plot .ln.r{stroke:var(--s2)}
+.plot .mk{stroke:var(--ink);stroke-width:1}
+.plot .dot{fill:var(--s1);stroke:var(--surface);stroke-width:2}
+.plot .dot.r{fill:var(--s2)}
+.plot input[type=range]{position:absolute;left:29px;top:166px;width:calc(100% - 30px);height:28px;margin:0;padding:0;background:transparent;-webkit-appearance:none;appearance:none;cursor:grab}
+.plot input[type=range]:active{cursor:grabbing}
+.plot input[type=range]:focus-visible{outline:none}
+.plot input[type=range]::-webkit-slider-runnable-track{height:28px;background:transparent}
+.plot input[type=range]::-moz-range-track{height:28px;background:transparent}
+.plot input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;box-sizing:border-box;width:22px;height:22px;margin-top:3px;border-radius:50%;background:var(--ink);border:3px solid var(--surface);box-shadow:0 0 0 1.5px var(--ink)}
+.plot input[type=range]::-moz-range-thumb{box-sizing:border-box;width:22px;height:22px;border-radius:50%;background:var(--ink);border:3px solid var(--surface);box-shadow:0 0 0 1.5px var(--ink)}
+.plot input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 1.5px var(--ink),0 0 0 4.5px var(--focus)}
+.plot input[type=range]:focus-visible::-moz-range-thumb{box-shadow:0 0 0 1.5px var(--ink),0 0 0 4.5px var(--focus)}
+.readout{margin-top:14px;font-size:1.02rem;line-height:1.5}
+.cm{width:100%;border-collapse:separate;border-spacing:2px;table-layout:fixed;margin-top:12px}
+.cm th{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);text-align:left;line-height:1.35;padding:6px 8px 6px 0}
+.cm thead th{padding-left:12px;padding-bottom:3px}
+.cm tbody th{width:27%;vertical-align:middle}
+.cm tbody th span{display:block;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.cm td{background:var(--surface-2);border-radius:3px;padding:10px 12px;vertical-align:top}
+.cm thead td{background:none}
+.cm td b{display:block;font-size:1.55rem;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}
+.cm td span{font-size:12.5px;color:var(--ink-2)}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 16px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.metrics dt{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink-2)}
+.metrics dd{font-size:1.25rem;font-weight:700;line-height:1.3;font-variant-numeric:tabular-nums}
+.delta{margin-top:12px;font-size:13.5px;color:var(--ink-2)}
+.tview{margin-top:10px;font-size:13.5px}
+.tview summary{cursor:pointer;color:var(--ink-2);width:max-content;max-width:100%;padding:4px 0}
+.tview summary:hover{color:var(--ink)}
+
+/* spec rows */
+.rows{border-top:2px solid var(--ink)}
+.rows>div{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);column-gap:32px;row-gap:6px;align-items:baseline;padding-block:17px;border-bottom:1px solid var(--line)}
+.rows dd{font-size:1.18rem;line-height:1.45}
+
+/* practice */
+.figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+.figs>div{display:flex;flex-direction:column;gap:10px;padding:24px 24px 26px 0;min-width:0}
+.figs>div+div{border-left:1px solid var(--line);padding-left:24px}
+.fig-num{display:flex;align-items:center;gap:.06em;font-family:var(--display);font-stretch:125%;font-weight:800;font-size:clamp(2.8rem,7.5vw,5.4rem);line-height:1;letter-spacing:-.03em}
+.fig-num .ic{width:.66em;height:.66em;color:var(--star)}
+.fig-cap{color:var(--ink-2);font-size:.97rem;line-height:1.45}
+.after{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+
+/* education */
+.edu{border-top:2px solid var(--ink)}
+.edu>li{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,6.5fr) minmax(0,2.5fr);column-gap:32px;row-gap:6px;align-items:baseline;padding-block:20px;border-bottom:1px solid var(--line)}
+.edu h3,.edu h4{font-family:var(--body);font-stretch:100%;font-weight:700;font-size:1.22rem;letter-spacing:-.005em;line-height:1.28;text-wrap:balance}
+.edu div p{color:var(--ink-2);font-size:.97rem;margin-top:3px}
+.edu .score{font-size:1.22rem;font-weight:700;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.sub{font-size:clamp(1.5rem,3vw,2.1rem);margin:clamp(40px,6vw,72px) 0 18px}
+
+/* contact */
+.contact{background:var(--mark);color:var(--on-mark);border-radius:10px;padding:clamp(28px,6vw,80px);display:grid;gap:clamp(20px,3vw,34px)}
+.contact h2{font-size:clamp(2.5rem,8.6vw,6.4rem)}
+.contact p{max-width:34em;font-size:1.1rem;line-height:1.5}
+.mail-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
+.mail{font-family:var(--display);font-stretch:100%;font-weight:700;font-size:clamp(1.15rem,3.3vw,2.3rem);line-height:1.2;letter-spacing:-.01em;overflow-wrap:anywhere;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+.contact .btn{border-color:var(--on-mark);color:var(--on-mark)}
+.contact .btn:hover,.contact .btn-solid{background:var(--on-mark);color:var(--mark)}
+.contact .btn-solid:hover{background:transparent;color:var(--on-mark)}
+.contact :focus-visible{outline-color:var(--on-mark)}
+.contact-links{display:flex;flex-wrap:wrap;gap:10px}
+
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:28px 40px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:var(--ink-2)}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--ink)}
+
+@media (min-width:900px){
+  .name{font-size:min(7.2vw,6.6rem)}
+  .name span{display:inline}
+}
+@media (max-width:899px){
+  .hero-grid,.sec-head,.case-body,.more-2{grid-template-columns:minmax(0,1fr)}
+  .sec-head{align-items:start}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .rows>div{grid-template-columns:minmax(0,1fr)}
+  .rows dd{font-size:1.08rem}
+  .edu>li{grid-template-columns:minmax(0,1fr)}
+  .edu .score{text-align:left}
+  .figs{grid-template-columns:minmax(0,1fr)}
+  .figs>div{padding:20px 0}
+  .figs>div+div{border-left:0;border-top:1px solid var(--line);padding-left:0}
+  .metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cm tbody th{width:25%}
+  .cm td{padding:9px 10px}
+  .cm td b{font-size:1.35rem}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-ext" viewBox="0 0 16 16"><path d="M5 11 11.2 4.8M6 4.8h5.2V10"/></symbol>
+  <symbol id="i-down" viewBox="0 0 16 16"><path d="M8 3v10M4 9l4 4 4-4"/></symbol>
+  <symbol id="i-up" viewBox="0 0 16 16"><path d="M8 13V3M4 7l4-4 4 4"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 16 16"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 5.5v-2a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2"/></symbol>
+  <symbol id="i-star" viewBox="0 0 16 16"><path d="M8 1.2l2.05 4.3 4.75.6-3.5 3.25.9 4.65L8 11.7 3.8 14l.9-4.65L1.2 6.1l4.75-.6z"/></symbol>
+</svg>
+
+<a class="skip" href="#work">Skip to work</a>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Karan Raj Kishore, back to top">KRK</a>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero wrap" id="intro" aria-labelledby="name">
+  <p class="label">Full-stack development<span aria-hidden="true">/</span>Machine learning<span aria-hidden="true">/</span>Competitive programming</p>
+  <h1 class="name" id="name"><span>Karan Raj</span> <span>Kishore</span></h1>
+  <div class="hero-grid">
+    <div>
+      <p class="statement">I build full-stack web apps and machine-learning models, and I put numbers on what I ship. CareerPath runs on <a class="hl" href="#careerpath" style="--d:.35s"><span>30+ REST APIs</span><span class="hl-m" aria-hidden="true">30+ REST APIs</span></a>. My churn model scores <a class="hl" href="#churn" style="--d:.6s"><span>0.849 ROC-AUC</span><span class="hl-m" aria-hidden="true">0.849 ROC-AUC</span></a> on customers it has never seen. On CodeChef I hold a <a class="hl" href="#practice" style="--d:.85s"><span>3-star rating</span><span class="hl-m" aria-hidden="true">3-star rating</span></a> with a peak of 1611.</p>
+      <div class="cta">
+        <a class="btn btn-solid" href="#work">See the work <svg class="ic" aria-hidden="true"><use href="#i-down"/></svg></a>
+        <a class="btn" href="https://github.com/Karan-codes1" target="_blank" rel="noopener noreferrer">GitHub <svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+        <a class="btn" href="https://www.linkedin.com/in/karan-raj2005/" target="_blank" rel="noopener noreferrer">LinkedIn <svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+      </div>
+    </div>
+    <dl class="facts">
+      <div><dt class="label">Studying</dt><dd>B.Tech in Software Engineering, Delhi Technological University</dd></div>
+      <div><dt class="label">Graduating</dt><dd>August 2027</dd></div>
+      <div><dt class="label">CGPA</dt><dd>8.05 / 10</dd></div>
+      <div><dt class="label">Builds with</dt><dd>Next.js, React.js, Node.js, Express.js, MongoDB, C++</dd></div>
+      <div><dt class="label">Email</dt><dd><a class="link" href="mailto:karanraj110505@gmail.com">karanraj110505@gmail.com</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sec wrap" id="work" aria-labelledby="work-h">
+  <div class="sec-head">
+    <h2 id="work-h">Work</h2>
+    <p>Two projects, both deployed. Each has a live demo and public source code.</p>
+  </div>
+
+  <article class="case" id="careerpath" aria-labelledby="cp-h">
+    <div class="case-head">
+      <div>
+        <p class="label">Full-stack / AI-powered learning platform</p>
+        <h3 id="cp-h">CareerPath</h3>
+      </div>
+      <div class="case-links">
+        <a class="btn btn-sm btn-solid" href="https://careerpath-roadmap-builder.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo <svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+        <a class="btn btn-sm" href="https://github.com/Karan-codes1/careerpath-roadmap-builder" target="_blank" rel="noopener noreferrer">Source <svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+      </div>
+    </div>
+    <div class="case-body">
+      <div class="case-text">
+        <p class="lede">A learning platform where people follow a career roadmap milestone by milestone, take quizzes and track their progress. I built both sides of it, a Next.js front end and a Node.js, Express.js and MongoDB back end with <mark>30+ REST APIs</mark>.</p>
+        <dl class="points">
+          <div><dt>Sign-in and roles</dt><dd>Google OAuth and credentials sign-in, with JWTs kept in httpOnly cookies. Middleware protects routes by role, and content management is admin-only.</dd></div>
+          <div><dt>Rate limits</dt><dd>Each user gets 20 calls an hour and 50 a day on the LLM endpoints, which keeps API cost under control. Failed logins are limited per IP address to block brute-force attempts.</dd></div>
+          <div><dt>Grading on the server</dt><dd>Quiz answers are scored on the server, and AI explanations are generated from database records, never from data the client sends.</dd></div>
+          <div><dt>Recommendations without invented links</dt><dd>An LLM pipeline works out a learner's weak concepts from their quiz mistakes, then selects resources only from candidates verified in the database. The model cannot return an invented or broken link.</dd></div>
+        </dl>
+        <ul class="stack" aria-label="Tech stack">
+          <li>Next.js</li><li>Node.js</li><li>Express.js</li><li>MongoDB</li><li>REST APIs</li><li>JWT</li><li>Google OAuth</li><li>OpenAI API</li>
+        </ul>
+      </div>
+      <figure class="panel">
+        <svg class="dg" viewBox="0 0 340 444" role="img" aria-label="Request path in CareerPath. The browser sends quiz answers to the Express API. The API authenticates the session, applies the per-user rate limit, grades the answers against MongoDB and builds a recommendation. It sends the mistakes and candidate resources from MongoDB to the LLM, which can pick only from those candidates. The API returns the score, explanations and links to the browser.">
+          <defs>
+            <marker id="dg-a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="dg-head" d="M1 1.5 9 5 1 8.5z"/></marker>
+          </defs>
+          <rect class="dg-node dg-dash" x="12" y="10" width="220" height="44" rx="6"/>
+          <text class="dg-t" x="28" y="37">Browser</text>
+          <text class="dg-tag" x="220" y="36" text-anchor="end">NOT TRUSTED</text>
+
+          <line class="dg-arr" x1="30" y1="56" x2="30" y2="107" marker-end="url(#dg-a)"/>
+          <text class="dg-s" x="42" y="78">answers</text>
+          <line class="dg-arr" x1="214" y1="108" x2="214" y2="57" marker-end="url(#dg-a)"/>
+          <text class="dg-s" x="202" y="97" text-anchor="end">score, explanations, links</text>
+
+          <rect class="dg-node" x="12" y="110" width="220" height="216" rx="8"/>
+          <text class="dg-t" x="28" y="134">Express API</text>
+          <text class="dg-s" x="220" y="134" text-anchor="end">30+ REST APIs</text>
+          <rect class="dg-step" x="22" y="146" width="200" height="40" rx="4"/>
+          <text class="dg-t" x="34" y="163">Authenticate</text>
+          <text class="dg-s" x="34" y="178">httpOnly JWT, role check</text>
+          <rect class="dg-step" x="22" y="191" width="200" height="40" rx="4"/>
+          <text class="dg-t" x="34" y="208">Rate-limit</text>
+          <text class="dg-s" x="34" y="223">20/hour, 50/day per user</text>
+          <rect class="dg-step" x="22" y="236" width="200" height="40" rx="4"/>
+          <text class="dg-t" x="34" y="253">Grade</text>
+          <text class="dg-s" x="34" y="268">scored from stored answers</text>
+          <rect class="dg-step" x="22" y="281" width="200" height="40" rx="4"/>
+          <text class="dg-t" x="34" y="298">Recommend</text>
+          <text class="dg-s" x="34" y="313">picks from stored resources</text>
+
+          <path class="dg-db" d="M252 246v64a36 8 0 0 0 72 0v-64z"/>
+          <ellipse class="dg-db" cx="288" cy="246" rx="36" ry="8"/>
+          <text class="dg-t dg-on" x="288" y="286" text-anchor="middle">MongoDB</text>
+          <text class="dg-tag" x="288" y="336" text-anchor="middle">SOURCE OF</text>
+          <text class="dg-tag" x="288" y="349" text-anchor="middle">TRUTH</text>
+          <line class="dg-arr" x1="252" y1="256" x2="225" y2="256" marker-end="url(#dg-a)"/>
+          <line class="dg-arr" x1="252" y1="301" x2="225" y2="301" marker-end="url(#dg-a)"/>
+
+          <line class="dg-arr" x1="30" y1="328" x2="30" y2="385" marker-end="url(#dg-a)"/>
+          <text class="dg-s" x="42" y="351">mistakes + candidates</text>
+          <line class="dg-arr" x1="214" y1="386" x2="214" y2="329" marker-end="url(#dg-a)"/>
+          <text class="dg-s" x="202" y="371" text-anchor="end">picks from candidates only</text>
+
+          <rect class="dg-node dg-dash" x="12" y="388" width="220" height="44" rx="6"/>
+          <text class="dg-t" x="28" y="415">LLM</text>
+          <text class="dg-tag" x="220" y="414" text-anchor="end">NOT TRUSTED</text>
+        </svg>
+        <figcaption>The API sits between two parties it does not take at their word, the browser and the model, and checks both against the database.</figcaption>
+      </figure>
+    </div>
+    <div class="more">
+      <h4 class="label">Also in the product</h4>
+      <ul class="flow">
+        <li>Milestone-based roadmaps with structured learning resources</li>
+        <li>AI explanations for incorrect quiz answers</li>
+        <li>Customized project ideas from the OpenAI API</li>
+        <li>Progress tracking and bookmarks</li>
+        <li>Dynamic content management for admins</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="case" id="churn" aria-labelledby="ch-h">
+    <div class="case-head">
+      <div>
+        <p class="label">Machine learning / End-to-end churn prediction</p>
+        <h3 id="ch-h">Customer Churn Predictor</h3>
+      </div>
+      <div class="case-links">
+        <a class="btn btn-sm btn-solid" href="https://customer-churn-predictor-plum.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo <svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+        <a class="btn btn-sm" href="https://github.com/Karan-codes1/customer-churn-prediction" target="_blank" rel="noopener noreferrer">Source <svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+      </div>
+    </div>
+    <div class="case-body">
+      <div class="case-text">
+        <p class="lede">An end-to-end system that predicts which telecom customers are likely to leave, built on 7,043 customer records. The best model reaches <mark>0.849 ROC-AUC</mark>, and it runs in the browser so every prediction is instant.</p>
+        <dl class="points">
+          <div><dt>Data preparation</dt><dd>Exploratory analysis, missing-value handling, feature scaling and one-hot encoding of 16 categorical features.</dd></div>
+          <div><dt>Two models compared</dt><dd>Logistic regression and a random forest, trained on a stratified 80/20 split. Logistic regression performed best, with 0.849 ROC-AUC and 80% accuracy.</dd></div>
+          <div><dt>A threshold chosen on purpose</dt><dd>Lowering the decision threshold from 0.50 to 0.35 puts catching churners first. Recall rises from 57% to 72% and F1 from 0.60 to 0.63.</dd></div>
+          <div><dt>Shipped as a web app</dt><dd>The app on Vercel runs the model in the browser. It shows each customer's risk drivers, retention suggestions, and a live threshold and confusion-matrix explorer.</dd></div>
+        </dl>
+        <ul class="stack" aria-label="Tech stack">
+          <li>Python</li><li>pandas</li><li>scikit-learn</li><li>Streamlit</li><li>JavaScript</li><li>SVG</li><li>Vercel</li>
+        </ul>
+      </div>
+      <figure class="panel" id="explorer">
+        <div class="ex-head">
+          <div>
+            <span class="label" id="thr-lab">Decision threshold</span>
+            <output class="ex-val" id="thr-val" for="thr">0.35</output>
+          </div>
+          <div class="seg" role="group" aria-label="Threshold presets">
+            <button type="button" id="preset-default" data-thr="0.5" aria-pressed="false">Default 0.50</button>
+            <button type="button" id="preset-tuned" data-thr="0.35" aria-pressed="true">Tuned 0.35</button>
+          </div>
+        </div>
+        <div class="legend" aria-hidden="true">
+          <span><i class="key"></i>Precision</span>
+          <span><i class="key r"></i>Recall</span>
+          <span class="hint">Drag the handle, or click the chart</span>
+        </div>
+        <div class="plot" id="thr-plot">
+          <div class="plot-svg" id="thr-svg"></div>
+          <input type="range" id="thr" min="0.1" max="0.8" step="0.01" value="0.35" aria-labelledby="thr-lab">
+        </div>
+        <p class="readout" id="thr-readout">At 0.35 the model catches <b>268</b> of the 374 customers who churned and raises <b>210</b> false alarms.</p>
+        <table class="cm">
+          <caption class="vh">Confusion matrix at the selected threshold</caption>
+          <thead><tr><td></td><th scope="col">Flagged</th><th scope="col">Not flagged</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Churned <span>374</span></th><td><b id="cm-tp">268</b><span>caught</span></td><td><b id="cm-fn">106</b><span>missed</span></td></tr>
+            <tr><th scope="row">Stayed <span>1,035</span></th><td><b id="cm-fp">210</b><span>false alarms</span></td><td><b id="cm-tn">825</b><span>left alone</span></td></tr>
+          </tbody>
+        </table>
+        <dl class="metrics">
+          <div><dt><i class="key" aria-hidden="true"></i>Precision</dt><dd id="m-p">56%</dd></div>
+          <div><dt><i class="key r" aria-hidden="true"></i>Recall</dt><dd id="m-r">72%</dd></div>
+          <div><dt>F1 score</dt><dd id="m-f">0.63</dd></div>
+          <div><dt>Accuracy</dt><dd id="m-a">78%</dd></div>
+        </dl>
+        <p class="delta" id="thr-delta">Compared with the default 0.50, that is 55 more churners caught and 92 more false alarms.</p>
+        <details class="tview">
+          <summary>Show the numbers as a table</summary>
+          <div class="tbl-wrap">
+            <table class="tbl" id="thr-table">
+              <thead><tr><th scope="col">Threshold</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th><th scope="col">Caught</th><th scope="col">False alarms</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </details>
+        <figcaption>Logistic regression on the 1,409 hold-out customers it never saw in training. A lower threshold catches more churners and raises more false alarms.</figcaption>
+      </figure>
+    </div>
+    <div class="more more-2">
+      <div>
+        <h4 class="label">Two models, one hold-out set</h4>
+        <div class="tbl-wrap">
+          <table class="tbl tbl-t">
+            <thead><tr><th scope="col">Metric</th><th scope="col" class="win">Logistic regression</th><th scope="col">Random forest</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Accuracy</th><td class="win">0.802</td><td>0.791</td></tr>
+              <tr><th scope="row">Precision</th><td class="win">0.644</td><td>0.625</td></tr>
+              <tr><th scope="row">Recall</th><td class="win">0.570</td><td>0.527</td></tr>
+              <tr><th scope="row">F1</th><td class="win">0.604</td><td>0.572</td></tr>
+              <tr><th scope="row">ROC-AUC</th><td class="win">0.849</td><td>0.833</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="tbl-note">Measured at the default 0.50 threshold. Logistic regression won on every metric, so it is the model in the app.</p>
+      </div>
+      <div>
+        <h4 class="label">What the data says</h4>
+        <ul class="finds">
+          <li>Month-to-month customers churned at <b>42.7%</b>. On two-year contracts the rate was <b>2.8%</b>.</li>
+          <li><b>53%</b> of customers in their first six months left, and the rate falls steadily with tenure.</li>
+          <li>Fiber optic customers churned at <b>41.9%</b>, against <b>19.0%</b> on DSL.</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="sec wrap" id="skills" aria-labelledby="skills-h">
+  <div class="sec-head">
+    <h2 id="skills-h">Skills</h2>
+    <p>What I work with, and what I have studied.</p>
+  </div>
+  <dl class="rows">
+    <div><dt class="label">Languages</dt><dd>C, C++ (proficient)</dd></div>
+    <div><dt class="label">Core</dt><dd>Data Structures and Algorithms, Problem Solving</dd></div>
+    <div><dt class="label">Frontend</dt><dd>React.js, Next.js, Tailwind CSS</dd></div>
+    <div><dt class="label">Backend</dt><dd>Node.js, Express.js, REST APIs</dd></div>
+    <div><dt class="label">Databases</dt><dd>MongoDB, SQL</dd></div>
+    <div><dt class="label">Machine learning</dt><dd>Supervised Learning, Regression, Classification, Decision Trees, Random Forests, Gradient Boosting, Model Evaluation</dd></div>
+    <div><dt class="label">Tools</dt><dd>Git, GitHub, Postman, VS Code</dd></div>
+    <div><dt class="label">Coursework</dt><dd>Operating Systems, Database Management Systems, Computer Networks, Object-Oriented Programming, Data Structures and Algorithms</dd></div>
+  </dl>
+</section>
+
+<section class="sec wrap" id="practice" aria-labelledby="practice-h">
+  <div class="sec-head">
+    <h2 id="practice-h">Problem solving</h2>
+    <p>Consistent data structures and algorithms practice in C++, on CodeChef and LeetCode.</p>
+  </div>
+  <div class="figs">
+    <div>
+      <p class="fig-num"><span aria-hidden="true">3</span><svg class="ic ic-fill" aria-hidden="true"><use href="#i-star"/></svg><span class="vh">3 star</span></p>
+      <p class="fig-cap">Coder rating on CodeChef</p>
+    </div>
+    <div>
+      <p class="fig-num">1611</p>
+      <p class="fig-cap">Max rating on CodeChef</p>
+    </div>
+    <div>
+      <p class="fig-num">442</p>
+      <p class="fig-cap">Best global rank, in rated contest 232</p>
+    </div>
+  </div>
+  <div class="after">
+    <a class="btn btn-sm" href="https://www.codechef.com/users/karan_raj" target="_blank" rel="noopener noreferrer">CodeChef profile <svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+    <a class="btn btn-sm" href="https://leetcode.com/u/karanraj110505/" target="_blank" rel="noopener noreferrer">LeetCode profile <svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+  </div>
+</section>
+
+<section class="sec wrap" id="education" aria-labelledby="edu-h">
+  <div class="sec-head">
+    <h2 id="edu-h">Education</h2>
+    <p>A four-year B.Tech at Delhi Technological University, finishing in August 2027.</p>
+  </div>
+  <ol class="edu">
+    <li>
+      <p class="label">2023 – 2027</p>
+      <div><h3>Delhi Technological University</h3><p>Bachelor of Technology in Software Engineering</p></div>
+      <p class="score">8.05 CGPA</p>
+    </li>
+    <li>
+      <p class="label">2023</p>
+      <div><h3>St. John's Sr. Sec. School</h3><p>Class XII, CBSE (AISSCE)</p></div>
+      <p class="score">89.8%</p>
+    </li>
+    <li>
+      <p class="label">2021</p>
+      <div><h3>Army Public School, Babina Cantt</h3><p>Class X, CBSE. Tunka Road, Babina Cantt, Jhansi, Uttar Pradesh</p></div>
+      <p class="score">91.83%</p>
+    </li>
+  </ol>
+
+  <h3 class="sub" id="certificates">Certificates</h3>
+  <ul class="edu">
+    <li>
+      <p class="label">Coding Ninjas</p>
+      <div><h4>DSA in C++</h4><p>August 2023 to February 2024</p></div>
+    </li>
+    <li>
+      <p class="label">DeepLearning.AI</p>
+      <div><h4>Supervised Machine Learning: Regression and Classification</h4><p>Taught by Andrew Ng</p></div>
+    </li>
+  </ul>
+  <div class="after">
+    <a class="btn btn-sm" href="https://drive.google.com/drive/folders/1GXM60sDPeQ8GmvRCSYgzWp_Nm3ztZv32?usp=drive_link" target="_blank" rel="noopener noreferrer">All certificates on Google Drive <svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+  </div>
+</section>
+
+<section class="sec wrap" id="contact" aria-labelledby="contact-h">
+  <div class="contact">
+    <h2 id="contact-h">Get in touch</h2>
+    <p>I graduate in August 2027. If you are hiring software engineers, or want to talk through one of these projects, email is the quickest way to reach me.</p>
+    <div class="mail-row">
+      <a class="mail" id="mail" href="mailto:karanraj110505@gmail.com">karanraj110505@gmail.com</a>
+      <button type="button" class="btn btn-sm btn-solid" id="copy-mail" data-copy="karanraj110505@gmail.com" data-sel="mail" data-label="Copy email"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg><span data-lab aria-live="polite">Copy email</span></button>
+    </div>
+    <div class="contact-links">
+      <a class="btn btn-sm" href="https://www.linkedin.com/in/karan-raj2005/" target="_blank" rel="noopener noreferrer">LinkedIn <svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+      <a class="btn btn-sm" href="https://github.com/Karan-codes1" target="_blank" rel="noopener noreferrer">GitHub <svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+      <a class="btn btn-sm" href="https://leetcode.com/u/karanraj110505/" target="_blank" rel="noopener noreferrer">LeetCode <svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+      <a class="btn btn-sm" href="https://www.codechef.com/users/karan_raj" target="_blank" rel="noopener noreferrer">CodeChef <svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap foot">
+  <span>Karan Raj Kishore, 2026</span>
+  <a href="#top">Back to top <svg class="ic" aria-hidden="true"><use href="#i-up"/></svg></a>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  var $ = function(id){ return document.getElementById(id); };
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  document.documentElement.lang = 'en';
+
+  /* Name: fit the widest line to the column, whichever font ends up loading. */
+  var nameEl = $('name'), wideMq = window.matchMedia('(min-width: 900px)'), lastW = -1, lastWide = null;
+  function fitName(){
+    var r = document.createRange();
+    function width(n){ r.selectNodeContents(n); return r.getBoundingClientRect().width; }
+    nameEl.style.fontSize = '100px';
+    nameEl.style.whiteSpace = 'nowrap';
+    var w = wideMq.matches ? width(nameEl) : Math.max.apply(null, [].map.call(nameEl.children, width));
+    nameEl.style.whiteSpace = '';
+    var size = Math.min(wideMq.matches ? 150 : 104, 100 * nameEl.clientWidth / w * 0.992);
+    nameEl.style.fontSize = (Math.floor(size * 10) / 10) + 'px';
+    lastW = nameEl.clientWidth; lastWide = wideMq.matches;
+  }
+  fitName();
+  if (document.fonts){
+    if (document.fonts.ready) document.fonts.ready.then(fitName);
+    if (document.fonts.addEventListener) document.fonts.addEventListener('loadingdone', fitName);
+  }
+  window.addEventListener('resize', function(){
+    if (nameEl.clientWidth !== lastW || wideMq.matches !== lastWide) fitName();
+  });
+
+  /* In-page links: scroll inside this document and move focus to the target. */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1), el = $(id);
+    if (!el) return;
+    e.preventDefault();
+    var behavior = reduce.matches ? 'auto' : 'smooth';
+    if (id === 'top') window.scrollTo({ top: 0, behavior: behavior });
+    else el.scrollIntoView({ behavior: behavior, block: 'start' });
+    if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+    el.focus({ preventScroll: true });
+  });
+
+  /* Copy email, with a select-the-text fallback where the clipboard is refused. */
+  var cb = $('copy-mail');
+  cb.addEventListener('click', function(){
+    var lab = cb.querySelector('[data-lab]');
+    function done(msg){
+      lab.textContent = msg;
+      clearTimeout(cb._t);
+      cb._t = setTimeout(function(){ lab.textContent = cb.dataset.label; }, 2400);
+    }
+    function select(){
+      var r = document.createRange(), s = window.getSelection();
+      r.selectNodeContents($(cb.dataset.sel));
+      s.removeAllRanges(); s.addRange(r);
+      done('Selected, now copy it');
+    }
+    try { navigator.clipboard.writeText(cb.dataset.copy).then(function(){ done('Copied'); }, select); }
+    catch (err) { select(); }
+  });
+
+  /* Threshold explorer.
+     SW holds [true positives, false positives] for thresholds 0.05 to 0.95 in steps of 0.01,
+     counted on the 1,409-customer hold-out set (374 churned, 1,035 stayed). */
+  var SW = [[368,621],[368,592],[365,567],[363,543],[360,517],[354,499],[349,468],[344,454],[340,441],[336,423],[335,408],[333,400],[331,387],[327,373],[325,358],[322,350],[318,334],[315,324],[304,310],[301,297],[296,290],[294,281],[291,273],[284,259],[282,255],[279,245],[277,240],[276,230],[274,223],[269,217],[268,210],[267,202],[264,198],[258,195],[254,188],[252,183],[250,176],[247,169],[242,164],[240,155],[235,151],[231,146],[226,141],[222,137],[219,126],[213,118],[212,113],[210,108],[205,103],[196,97],[190,94],[183,89],[181,82],[173,78],[170,75],[165,64],[157,59],[153,57],[145,52],[136,49],[128,44],[124,39],[114,39],[105,34],[96,32],[90,28],[85,25],[75,24],[67,20],[61,16],[51,14],[38,13],[31,9],[25,9],[20,8],[15,5],[12,3],[10,3],[5,2],[5,1],[2,0],[1,0],[1,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]];
+  var POS = 374, NEG = 1035, T0 = 0.1, T1 = 0.8, TH = 22;
+  function at(t){
+    var s = SW[Math.round(t * 100) - 5], tp = s[0], fp = s[1], pr = tp / (tp + fp), re = tp / POS;
+    return { tp: tp, fp: fp, fn: POS - tp, tn: NEG - fp, pr: pr, re: re, f1: 2 * pr * re / (pr + re), acc: (tp + NEG - fp) / (POS + NEG) };
+  }
+  function pct(v){ return Math.round(v * 100) + '%'; }
+  function bold(v){ var b = document.createElement('b'); b.textContent = v; return b; }
+  var plot = $('thr-plot'), holder = $('thr-svg'), range = $('thr'), presets = document.querySelectorAll('.seg button');
+  var thr = 0.35, geo = null, lastPW = 0, DEF = at(0.5);
+
+  function draw(){
+    var w = Math.max(240, Math.floor(plot.clientWidth)), l = 40, r = 12, top = 8, ph = 148;
+    var base = top + ph, track = base + 24, h = track + 34, pw = w - l - r, s = '', i, t;
+    function X(v){ return l + (v - T0) / (T1 - T0) * pw; }
+    function Y(v){ return base - v * ph; }
+    function path(k){
+      var d = '';
+      for (var j = 10; j <= 80; j++) d += (j === 10 ? 'M' : 'L') + X(j / 100).toFixed(1) + ' ' + Y(at(j / 100)[k]).toFixed(1);
+      return d;
+    }
+    geo = { X: X, Y: Y, l: l, pw: pw, top: top, track: track };
+    [0, 0.25, 0.5, 0.75, 1].forEach(function(v){
+      s += '<line class="gl" x1="' + l + '" x2="' + (w - r) + '" y1="' + Y(v) + '" y2="' + Y(v) + '"/>' +
+           '<text x="' + (l - 8) + '" y="' + (Y(v) + 4) + '" text-anchor="end">' + (v * 100) + '%</text>';
+    });
+    s += '<path class="ln r" d="' + path('re') + '"/><path class="ln" d="' + path('pr') + '"/>';
+    var a = at(T0), e = at(T1);
+    s += '<text class="dl" x="' + (X(T1) - 4) + '" y="' + (Y(e.pr) - 12) + '" text-anchor="end">Precision</text>' +
+         '<text class="dl" x="' + (X(0.67) + 4) + '" y="' + (Y(at(0.67).re) - 6) + '">Recall</text>';
+    s += '<line class="ax" x1="' + l + '" x2="' + (w - r) + '" y1="' + track + '" y2="' + track + '"/>';
+    for (i = 1; i <= 8; i++){
+      t = i / 10;
+      s += '<line class="tk" x1="' + X(t) + '" x2="' + X(t) + '" y1="' + (track - 4) + '" y2="' + (track + 4) + '"/>' +
+           '<text x="' + X(t) + '" y="' + (track + 27) + '" text-anchor="middle">' + t.toFixed(1) + '</text>';
+    }
+    s += '<g id="thr-mk"></g>';
+    holder.innerHTML = '<svg viewBox="0 0 ' + w + ' ' + h + '" width="' + w + '" height="' + h + '" role="img" aria-label="Line chart. As the decision threshold rises from 0.10 to 0.80, recall falls from ' + pct(a.re) + ' to ' + pct(e.re) + ' and precision rises from ' + pct(a.pr) + ' to ' + pct(e.pr) + '.">' + s + '</svg>';
+    range.style.left = (l - TH / 2) + 'px';
+    range.style.width = (pw + TH) + 'px';
+    range.style.top = (track - 14) + 'px';
+    mark();
+  }
+  function mark(){
+    var d = at(thr), x = geo.X(thr).toFixed(1);
+    $('thr-mk').innerHTML = '<line class="mk" x1="' + x + '" x2="' + x + '" y1="' + geo.top + '" y2="' + geo.track + '"/>' +
+      '<circle class="dot r" cx="' + x + '" cy="' + geo.Y(d.re).toFixed(1) + '" r="5"/>' +
+      '<circle class="dot" cx="' + x + '" cy="' + geo.Y(d.pr).toFixed(1) + '" r="5"/>';
+  }
+  function update(){
+    var d = at(thr), t = thr.toFixed(2), dtp = d.tp - DEF.tp, dfp = d.fp - DEF.fp, ro = $('thr-readout');
+    $('thr-val').textContent = t;
+    $('cm-tp').textContent = d.tp; $('cm-fn').textContent = d.fn;
+    $('cm-fp').textContent = d.fp; $('cm-tn').textContent = d.tn.toLocaleString('en-US');
+    $('m-p').textContent = pct(d.pr); $('m-r').textContent = pct(d.re);
+    $('m-f').textContent = d.f1.toFixed(2); $('m-a').textContent = pct(d.acc);
+    ro.textContent = '';
+    ro.append('At ' + t + ' the model catches ', bold(d.tp), ' of the 374 customers who churned and raises ', bold(d.fp), ' false alarms.');
+    $('thr-delta').textContent = thr === 0.5 ? 'This is the default threshold in scikit-learn.' :
+      'Compared with the default 0.50, that is ' + Math.abs(dtp) + (dtp >= 0 ? ' more' : ' fewer') + ' churners caught and ' + Math.abs(dfp) + (dfp >= 0 ? ' more' : ' fewer') + ' false alarms.';
+    [].forEach.call(presets, function(b){ b.setAttribute('aria-pressed', String(Math.abs(+b.dataset.thr - thr) < 0.001)); });
+    range.setAttribute('aria-valuetext', t + ': ' + d.tp + ' of 374 churners caught, ' + d.fp + ' false alarms');
+    if (geo) mark();
+  }
+  function set(v){
+    thr = Math.min(T1, Math.max(T0, Math.round(v * 100) / 100));
+    range.value = thr;
+    update();
+  }
+  function redraw(){
+    var w = Math.floor(plot.clientWidth);
+    if (w && w !== lastPW){ lastPW = w; draw(); }
+  }
+  range.addEventListener('input', function(){ set(+range.value); });
+  holder.addEventListener('click', function(e){
+    if (!geo) return;
+    set(T0 + (e.clientX - holder.getBoundingClientRect().left - geo.l) / geo.pw * (T1 - T0));
+  });
+  [].forEach.call(presets, function(b){ b.addEventListener('click', function(){ set(+b.dataset.thr); }); });
+
+  var tb = $('thr-table').tBodies[0];
+  for (var i = 20; i <= 60; i += 5){
+    var d = at(i / 100), tr = tb.insertRow(), th = document.createElement('th');
+    th.scope = 'row'; th.textContent = (i / 100).toFixed(2); tr.appendChild(th);
+    [d.pr.toFixed(3), d.re.toFixed(3), d.f1.toFixed(3), d.tp, d.fp].forEach(function(v){ tr.insertCell().textContent = v; });
+  }
+
+  redraw();
+  update();
+  if ('ResizeObserver' in window) new ResizeObserver(redraw).observe(plot);
+  else window.addEventListener('resize', redraw);
+
+  /* Mark the section in view in the top bar. */
+  if ('IntersectionObserver' in window){
+    var links = [].slice.call(document.querySelectorAll('.nav nav a'));
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        links.forEach(function(a){
+          if (a.getAttribute('href') === '#' + en.target.id) a.setAttribute('aria-current', 'true');
+          else a.removeAttribute('aria-current');
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ['intro', 'work', 'skills', 'practice', 'education', 'contact'].forEach(function(id){ var el = $(id); if (el) io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
